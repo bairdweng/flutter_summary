@@ -112,14 +112,13 @@
 
   > - Wrap直接使用，超过屏幕自动换行
   > - Flow需要自己计算，但是性能较好。同时由于是自己计算的，所以换行规则可以自己定。
-  
+
 7. 层叠布局
-  
+
   > - Stack类似于Android里面的FrameLayout、Web中的绝对定位
   > - Position 结合Stack使用可以实现绝对定位的效果
-  
 
-#####容器类部件
+##### 容器类部件
 
 1. padding
 
@@ -201,7 +200,7 @@
 5. Container容器
 
   > 这个容器比较强大的是它有padding跟margin以及变换等等不过底层也是用上面的控件实现的..
-  
+
   ```dart
   Container({
     this.alignment,
@@ -219,7 +218,7 @@
     margin,
   })
   ```
-  
+
 6. Scaffold 脚手架
 
     > ##### drawer（侧边栏）、BottomNacigationBar（底部导航栏）
@@ -496,5 +495,5 @@ ThemeData({
     ...
   })
   ```
-  
+
   

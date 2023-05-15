@@ -13,6 +13,7 @@ import 'package:fl_example/provider/provider_example.dart';
 import 'package:fl_example/bloc/bloc_example.dart';
 import 'package:fl_example/rxdart_example/rxdart_example.dart';
 import 'package:fl_example/rxdart_example/github_api.dart';
+import 'package:fl_example/app/flutter_app.dart';
 
 class MYRouter {
   final Map<String, Map<String, dynamic>> routers = {};
@@ -35,6 +36,7 @@ class MYRouter {
     registerRouter("provider_example", '跨组件共享', const ProviderExample(title: "跨组件共享"));
     registerRouter("bloc_example", '跨组件共享', const BlocExample(title: "bloc"));
     registerRouter("rxdart_example", 'rxdart_example', RXDartExample(api: GithubApi()));
+    registerRouter("App", "来一个app", const FlutterExample(title: "来一个app吧"));
   }
 
   //提供了一个工厂方法来获取该类的实例

@@ -4,6 +4,7 @@ import 'class/spacecraft.dart';
 import 'class/optionsclass.dart';
 import 'class/ex_implements.dart';
 import 'async/async_exmple.dart';
+import 'class/const_final.dart';
 
 void hello() {
   print('The number is '); // Print to console.
@@ -25,4 +26,6 @@ void main(List<String> args) {
 
   AsyncExample ex = AsyncExample();
   ex.run();
+
+  ConstExample("123123123").sayHell();
 }
