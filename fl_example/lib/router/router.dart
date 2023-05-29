@@ -36,7 +36,7 @@ class MYRouter {
     registerRouter("provider_example", '跨组件共享', const ProviderExample(title: "跨组件共享"));
     registerRouter("bloc_example", '跨组件共享', const BlocExample(title: "bloc"));
     registerRouter("rxdart_example", 'rxdart_example', RXDartExample(api: GithubApi()));
-    registerRouter("App", "来一个app", const FlutterExample(title: "来一个app吧"));
+    registerRouter("App", "来一个app", const FlutterApp(title: "来一个app吧"));
   }
 
   //提供了一个工厂方法来获取该类的实例
