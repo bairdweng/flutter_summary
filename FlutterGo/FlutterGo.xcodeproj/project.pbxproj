@@ -1,0 +1,720 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AEC6CF549ECF99555A3C70B5 /* libPods-FlutterGo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B817276E8D4CA6F188E0E3 /* libPods-FlutterGo.a */; };
+		DA33219E2A25E6B200638AD2 /* FlutterBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33219D2A25E6B200638AD2 /* FlutterBaseViewController.swift */; };
+		DA3321A32A25EADE00638AD2 /* TowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3321A22A25EADE00638AD2 /* TowViewController.swift */; };
+		DA5A95DD2A25FBD400C9C770 /* FLNativeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5A95DC2A25FBD400C9C770 /* FLNativeView.swift */; };
+		DAF35D372A25C86700C76C26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF35D362A25C86700C76C26 /* AppDelegate.swift */; };
+		DAF35D392A25C86700C76C26 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF35D382A25C86700C76C26 /* SceneDelegate.swift */; };
+		DAF35D3B2A25C86700C76C26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF35D3A2A25C86700C76C26 /* ViewController.swift */; };
+		DAF35D3E2A25C86700C76C26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF35D3C2A25C86700C76C26 /* Main.storyboard */; };
+		DAF35D402A25C86800C76C26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAF35D3F2A25C86800C76C26 /* Assets.xcassets */; };
+		DAF35D432A25C86800C76C26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF35D412A25C86800C76C26 /* LaunchScreen.storyboard */; };
+		DAF35D4E2A25C86800C76C26 /* FlutterGoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF35D4D2A25C86800C76C26 /* FlutterGoTests.swift */; };
+		DAF35D582A25C86800C76C26 /* FlutterGoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF35D572A25C86800C76C26 /* FlutterGoUITests.swift */; };
+		DAF35D5A2A25C86800C76C26 /* FlutterGoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF35D592A25C86800C76C26 /* FlutterGoUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DAF35D4A2A25C86800C76C26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAF35D2B2A25C86700C76C26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAF35D322A25C86700C76C26;
+			remoteInfo = FlutterGo;
+		};
+		DAF35D542A25C86800C76C26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAF35D2B2A25C86700C76C26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAF35D322A25C86700C76C26;
+			remoteInfo = FlutterGo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C3B817276E8D4CA6F188E0E3 /* libPods-FlutterGo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FlutterGo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5FF993C52C2939B167184EC /* Pods-FlutterGo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlutterGo.debug.xcconfig"; path = "Target Support Files/Pods-FlutterGo/Pods-FlutterGo.debug.xcconfig"; sourceTree = "<group>"; };
+		D29F071777EF0514BE6E14F7 /* Pods-FlutterGo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlutterGo.release.xcconfig"; path = "Target Support Files/Pods-FlutterGo/Pods-FlutterGo.release.xcconfig"; sourceTree = "<group>"; };
+		DA33219D2A25E6B200638AD2 /* FlutterBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlutterBaseViewController.swift; sourceTree = "<group>"; };
+		DA3321A22A25EADE00638AD2 /* TowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TowViewController.swift; sourceTree = "<group>"; };
+		DA5A95DC2A25FBD400C9C770 /* FLNativeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FLNativeView.swift; path = FlutterGo/Views/FLNativeView.swift; sourceTree = SOURCE_ROOT; };
+		DAF35D332A25C86700C76C26 /* FlutterGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlutterGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAF35D362A25C86700C76C26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DAF35D382A25C86700C76C26 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DAF35D3A2A25C86700C76C26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DAF35D3D2A25C86700C76C26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DAF35D3F2A25C86800C76C26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DAF35D422A25C86800C76C26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DAF35D442A25C86800C76C26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAF35D492A25C86800C76C26 /* FlutterGoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlutterGoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAF35D4D2A25C86800C76C26 /* FlutterGoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlutterGoTests.swift; sourceTree = "<group>"; };
+		DAF35D532A25C86800C76C26 /* FlutterGoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlutterGoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAF35D572A25C86800C76C26 /* FlutterGoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlutterGoUITests.swift; sourceTree = "<group>"; };
+		DAF35D592A25C86800C76C26 /* FlutterGoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlutterGoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DAF35D302A25C86700C76C26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEC6CF549ECF99555A3C70B5 /* libPods-FlutterGo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAF35D462A25C86800C76C26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAF35D502A25C86800C76C26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		66B4872BAB99A8B8C43E2C14 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3B817276E8D4CA6F188E0E3 /* libPods-FlutterGo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF56997BD72C003457E259A9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C5FF993C52C2939B167184EC /* Pods-FlutterGo.debug.xcconfig */,
+				D29F071777EF0514BE6E14F7 /* Pods-FlutterGo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DA33219F2A25EA6F00638AD2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DA3321A22A25EADE00638AD2 /* TowViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DA3321A12A25EA8600638AD2 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				DA33219D2A25E6B200638AD2 /* FlutterBaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		DA3321A42A25F54D00638AD2 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				DA5A95DC2A25FBD400C9C770 /* FLNativeView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		DAF35D2A2A25C86700C76C26 = {
+			isa = PBXGroup;
+			children = (
+				DAF35D352A25C86700C76C26 /* FlutterGo */,
+				DAF35D4C2A25C86800C76C26 /* FlutterGoTests */,
+				DAF35D562A25C86800C76C26 /* FlutterGoUITests */,
+				DAF35D342A25C86700C76C26 /* Products */,
+				AF56997BD72C003457E259A9 /* Pods */,
+				66B4872BAB99A8B8C43E2C14 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DAF35D342A25C86700C76C26 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DAF35D332A25C86700C76C26 /* FlutterGo.app */,
+				DAF35D492A25C86800C76C26 /* FlutterGoTests.xctest */,
+				DAF35D532A25C86800C76C26 /* FlutterGoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DAF35D352A25C86700C76C26 /* FlutterGo */ = {
+			isa = PBXGroup;
+			children = (
+				DA3321A42A25F54D00638AD2 /* views */,
+				DA3321A12A25EA8600638AD2 /* Base */,
+				DA33219F2A25EA6F00638AD2 /* ViewControllers */,
+				DAF35D362A25C86700C76C26 /* AppDelegate.swift */,
+				DAF35D382A25C86700C76C26 /* SceneDelegate.swift */,
+				DAF35D3A2A25C86700C76C26 /* ViewController.swift */,
+				DAF35D3C2A25C86700C76C26 /* Main.storyboard */,
+				DAF35D3F2A25C86800C76C26 /* Assets.xcassets */,
+				DAF35D412A25C86800C76C26 /* LaunchScreen.storyboard */,
+				DAF35D442A25C86800C76C26 /* Info.plist */,
+			);
+			path = FlutterGo;
+			sourceTree = "<group>";
+		};
+		DAF35D4C2A25C86800C76C26 /* FlutterGoTests */ = {
+			isa = PBXGroup;
+			children = (
+				DAF35D4D2A25C86800C76C26 /* FlutterGoTests.swift */,
+			);
+			path = FlutterGoTests;
+			sourceTree = "<group>";
+		};
+		DAF35D562A25C86800C76C26 /* FlutterGoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DAF35D572A25C86800C76C26 /* FlutterGoUITests.swift */,
+				DAF35D592A25C86800C76C26 /* FlutterGoUITestsLaunchTests.swift */,
+			);
+			path = FlutterGoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DAF35D322A25C86700C76C26 /* FlutterGo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAF35D5D2A25C86800C76C26 /* Build configuration list for PBXNativeTarget "FlutterGo" */;
+			buildPhases = (
+				2F556FA06712650258F2C371 /* [CP] Check Pods Manifest.lock */,
+				8CD92ED406A426BA45D7B22D /* [CP-User] Run Flutter Build flutter_go Script */,
+				DAF35D2F2A25C86700C76C26 /* Sources */,
+				DAF35D302A25C86700C76C26 /* Frameworks */,
+				DAF35D312A25C86700C76C26 /* Resources */,
+				E4433995BADF2C899D9E3017 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlutterGo;
+			productName = FlutterGo;
+			productReference = DAF35D332A25C86700C76C26 /* FlutterGo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DAF35D482A25C86800C76C26 /* FlutterGoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAF35D602A25C86800C76C26 /* Build configuration list for PBXNativeTarget "FlutterGoTests" */;
+			buildPhases = (
+				DAF35D452A25C86800C76C26 /* Sources */,
+				DAF35D462A25C86800C76C26 /* Frameworks */,
+				DAF35D472A25C86800C76C26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAF35D4B2A25C86800C76C26 /* PBXTargetDependency */,
+			);
+			name = FlutterGoTests;
+			productName = FlutterGoTests;
+			productReference = DAF35D492A25C86800C76C26 /* FlutterGoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DAF35D522A25C86800C76C26 /* FlutterGoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAF35D632A25C86800C76C26 /* Build configuration list for PBXNativeTarget "FlutterGoUITests" */;
+			buildPhases = (
+				DAF35D4F2A25C86800C76C26 /* Sources */,
+				DAF35D502A25C86800C76C26 /* Frameworks */,
+				DAF35D512A25C86800C76C26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAF35D552A25C86800C76C26 /* PBXTargetDependency */,
+			);
+			name = FlutterGoUITests;
+			productName = FlutterGoUITests;
+			productReference = DAF35D532A25C86800C76C26 /* FlutterGoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DAF35D2B2A25C86700C76C26 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					DAF35D322A25C86700C76C26 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					DAF35D482A25C86800C76C26 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = DAF35D322A25C86700C76C26;
+					};
+					DAF35D522A25C86800C76C26 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = DAF35D322A25C86700C76C26;
+					};
+				};
+			};
+			buildConfigurationList = DAF35D2E2A25C86700C76C26 /* Build configuration list for PBXProject "FlutterGo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DAF35D2A2A25C86700C76C26;
+			productRefGroup = DAF35D342A25C86700C76C26 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DAF35D322A25C86700C76C26 /* FlutterGo */,
+				DAF35D482A25C86800C76C26 /* FlutterGoTests */,
+				DAF35D522A25C86800C76C26 /* FlutterGoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DAF35D312A25C86700C76C26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAF35D432A25C86800C76C26 /* LaunchScreen.storyboard in Resources */,
+				DAF35D402A25C86800C76C26 /* Assets.xcassets in Resources */,
+				DAF35D3E2A25C86700C76C26 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAF35D472A25C86800C76C26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAF35D512A25C86800C76C26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F556FA06712650258F2C371 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlutterGo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CD92ED406A426BA45D7B22D /* [CP-User] Run Flutter Build flutter_go Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP-User] Run Flutter Build flutter_go Script";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../flutter_go/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
+		};
+		E4433995BADF2C899D9E3017 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlutterGo/Pods-FlutterGo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlutterGo/Pods-FlutterGo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlutterGo/Pods-FlutterGo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DAF35D2F2A25C86700C76C26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAF35D3B2A25C86700C76C26 /* ViewController.swift in Sources */,
+				DA5A95DD2A25FBD400C9C770 /* FLNativeView.swift in Sources */,
+				DA3321A32A25EADE00638AD2 /* TowViewController.swift in Sources */,
+				DAF35D372A25C86700C76C26 /* AppDelegate.swift in Sources */,
+				DA33219E2A25E6B200638AD2 /* FlutterBaseViewController.swift in Sources */,
+				DAF35D392A25C86700C76C26 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAF35D452A25C86800C76C26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAF35D4E2A25C86800C76C26 /* FlutterGoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAF35D4F2A25C86800C76C26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAF35D582A25C86800C76C26 /* FlutterGoUITests.swift in Sources */,
+				DAF35D5A2A25C86800C76C26 /* FlutterGoUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DAF35D4B2A25C86800C76C26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAF35D322A25C86700C76C26 /* FlutterGo */;
+			targetProxy = DAF35D4A2A25C86800C76C26 /* PBXContainerItemProxy */;
+		};
+		DAF35D552A25C86800C76C26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAF35D322A25C86700C76C26 /* FlutterGo */;
+			targetProxy = DAF35D542A25C86800C76C26 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DAF35D3C2A25C86700C76C26 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAF35D3D2A25C86700C76C26 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DAF35D412A25C86800C76C26 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAF35D422A25C86800C76C26 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DAF35D5B2A25C86800C76C26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DAF35D5C2A25C86800C76C26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DAF35D5E2A25C86800C76C26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5FF993C52C2939B167184EC /* Pods-FlutterGo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FlutterGo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Test.FlutterGo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DAF35D5F2A25C86800C76C26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D29F071777EF0514BE6E14F7 /* Pods-FlutterGo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FlutterGo/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Test.FlutterGo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DAF35D612A25C86800C76C26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Test.FlutterGoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlutterGo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FlutterGo";
+			};
+			name = Debug;
+		};
+		DAF35D622A25C86800C76C26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Test.FlutterGoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlutterGo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FlutterGo";
+			};
+			name = Release;
+		};
+		DAF35D642A25C86800C76C26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Test.FlutterGoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FlutterGo;
+			};
+			name = Debug;
+		};
+		DAF35D652A25C86800C76C26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Test.FlutterGoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FlutterGo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DAF35D2E2A25C86700C76C26 /* Build configuration list for PBXProject "FlutterGo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAF35D5B2A25C86800C76C26 /* Debug */,
+				DAF35D5C2A25C86800C76C26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAF35D5D2A25C86800C76C26 /* Build configuration list for PBXNativeTarget "FlutterGo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAF35D5E2A25C86800C76C26 /* Debug */,
+				DAF35D5F2A25C86800C76C26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAF35D602A25C86800C76C26 /* Build configuration list for PBXNativeTarget "FlutterGoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAF35D612A25C86800C76C26 /* Debug */,
+				DAF35D622A25C86800C76C26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAF35D632A25C86800C76C26 /* Build configuration list for PBXNativeTarget "FlutterGoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAF35D642A25C86800C76C26 /* Debug */,
+				DAF35D652A25C86800C76C26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DAF35D2B2A25C86700C76C26 /* Project object */;
+}
