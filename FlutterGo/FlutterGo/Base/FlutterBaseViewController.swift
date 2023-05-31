@@ -35,6 +35,15 @@ class FlutterBaseViewController: FlutterViewController {
         let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
         let newEngine = appDelegate.engines.makeEngine(withEntrypoint: entryPoint, libraryURI: nil)
         GeneratedPluginRegistrant.register(with: newEngine)
+        
+        weak var registrar = newEngine.registrar(forPlugin: "hello_world")
+        
+        let factory = FLNativeViewFactory(messenger: registrar!.messenger())
+
+        registrar!.register(
+            factory,
+            withId: "platform_text_view")
+        
         super.init(engine: newEngine, nibName: nil, bundle: nil)
     }
 

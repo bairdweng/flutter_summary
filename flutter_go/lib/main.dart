@@ -87,12 +87,18 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              '这非常好，直接开始了啊333333',
+              '这非常好666888，直接开始了啊333333',
             ),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
+            Container(
+              color: Colors.red,
+              width: 100,
+              height: 100,
+              child: const MYNativeView(),
+            )
           ],
         ),
       ),
@@ -101,6 +107,22 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+}
+
+class MYNativeView extends StatelessWidget {
+  const MYNativeView({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    const String viewType = 'platform_text_view';
+    final Map<String, dynamic> creationParams = <String, dynamic>{};
+    return UiKitView(
+      viewType: viewType,
+      layoutDirection: TextDirection.ltr,
+      creationParams: creationParams,
+      creationParamsCodec: const StandardMessageCodec(),
     );
   }
 }

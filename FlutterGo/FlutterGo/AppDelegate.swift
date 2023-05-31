@@ -9,7 +9,12 @@ import Flutter
 import FlutterPluginRegistrant
 import UIKit
 
-
+//class MYFlutterPlgins: NSObject,FlutterPlugin {
+//    static func register(with registrar: FlutterPluginRegistrar) {
+//        let factory = FLNativeViewFactory(messenger: registrar.messenger())
+//        registrar.register(factory, withId: "platform_text_view")
+//    }
+//}
 
 
 @main
@@ -19,7 +24,6 @@ class AppDelegate: FlutterAppDelegate {
     let engines = FlutterEngineGroup(name: "multiple-flutters", project: nil)
 
     override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
-        GeneratedPluginRegistrant.register(with: self);
         return super.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
 }
