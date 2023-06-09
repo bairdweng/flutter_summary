@@ -87,16 +87,16 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              '这非常好666888，直接开始了啊333333',
+              '这非常好~~，直接开始了啊66',
             ),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
             Container(
-              color: Colors.red,
+              color: Colors.purple,
               width: 100,
-              height: 100,
+              height: 300,
               child: const MYNativeView(),
             )
           ],
@@ -117,12 +117,13 @@ class MYNativeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const String viewType = 'platform_text_view';
-    final Map<String, dynamic> creationParams = <String, dynamic>{};
-    return UiKitView(
+    // final Map<String, dynamic> creationParams = <String, dynamic>{};
+    // creationParams.addEntries(<String, dynamic>{"test": "123123"});
+    return const UiKitView(
       viewType: viewType,
       layoutDirection: TextDirection.ltr,
-      creationParams: creationParams,
-      creationParamsCodec: const StandardMessageCodec(),
+      creationParams: {"test": "我是Flutter，为啥要对抗呢，草3333"},
+      creationParamsCodec: StandardMessageCodec(),
     );
   }
 }

@@ -26,6 +26,8 @@ class FlutterBaseViewController: FlutterViewController {
                 self.delegate?.callMethods(vc: self, funtionName: call.method, params: result)
             }
         }
+        
+       
         // Do any additional setup after loading the view.
     }
 

@@ -8,7 +8,7 @@
 import UIKit
 
 import Flutter
-
+import SnapKit
 class FLNativeViewFactory: NSObject, FlutterPlatformViewFactory {
     private var messenger: FlutterBinaryMessenger
     init(messenger: FlutterBinaryMessenger) {
@@ -27,6 +27,10 @@ class FLNativeViewFactory: NSObject, FlutterPlatformViewFactory {
             arguments: args,
             binaryMessenger: nil)
     }
+    
+    func createArgsCodec() -> FlutterMessageCodec & NSObjectProtocol {
+        return FlutterStandardMessageCodec.sharedInstance()
+    }
 }
 
 class FLNativeView: NSObject, FlutterPlatformView {
@@ -37,20 +41,25 @@ class FLNativeView: NSObject, FlutterPlatformView {
         arguments args: Any?,
         binaryMessenger messenger: FlutterBinaryMessenger?
     ) {
-        _view = UIView()
+        _view = UIView(frame: frame)
         super.init()
         // iOS views can be created here
-        createNativeView(view: _view)
+        createNativeView(view: _view,params: args)
     }
 
-    func createNativeView(view _view: UIView) {
-        _view.backgroundColor = UIColor.blue
+    func createNativeView(view _view: UIView, params:Any?) {
+        
+        let dic = params as? [String:Any];
+        let test = dic?["test"] as? String ?? "默认的文字";
+        _view.backgroundColor = UIColor.yellow
         let nativeLabel = UILabel()
-        nativeLabel.text = "Native text from iOS"
-        nativeLabel.textColor = UIColor.white
+        nativeLabel.text = test
+        nativeLabel.textColor = UIColor.red
         nativeLabel.textAlignment = .center
-        nativeLabel.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
         _view.addSubview(nativeLabel)
+        nativeLabel.snp.makeConstraints { make in
+            make.edges.equalTo(_view)
+        }
     }
 
     func view() -> UIView {
