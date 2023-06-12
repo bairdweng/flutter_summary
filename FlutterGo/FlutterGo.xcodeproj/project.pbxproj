@@ -10,6 +10,7 @@
 		AEC6CF549ECF99555A3C70B5 /* libPods-FlutterGo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B817276E8D4CA6F188E0E3 /* libPods-FlutterGo.a */; };
 		DA33219E2A25E6B200638AD2 /* FlutterBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA33219D2A25E6B200638AD2 /* FlutterBaseViewController.swift */; };
 		DA3321A32A25EADE00638AD2 /* TowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3321A22A25EADE00638AD2 /* TowViewController.swift */; };
+		DA449D8F2A36B96B00BB18BE /* FlutterChannelManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA449D8E2A36B96B00BB18BE /* FlutterChannelManage.swift */; };
 		DA5A95DD2A25FBD400C9C770 /* FLNativeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5A95DC2A25FBD400C9C770 /* FLNativeView.swift */; };
 		DAF35D372A25C86700C76C26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF35D362A25C86700C76C26 /* AppDelegate.swift */; };
 		DAF35D392A25C86700C76C26 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF35D382A25C86700C76C26 /* SceneDelegate.swift */; };
@@ -45,6 +46,7 @@
 		D29F071777EF0514BE6E14F7 /* Pods-FlutterGo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlutterGo.release.xcconfig"; path = "Target Support Files/Pods-FlutterGo/Pods-FlutterGo.release.xcconfig"; sourceTree = "<group>"; };
 		DA33219D2A25E6B200638AD2 /* FlutterBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlutterBaseViewController.swift; sourceTree = "<group>"; };
 		DA3321A22A25EADE00638AD2 /* TowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TowViewController.swift; sourceTree = "<group>"; };
+		DA449D8E2A36B96B00BB18BE /* FlutterChannelManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlutterChannelManage.swift; sourceTree = "<group>"; };
 		DA5A95DC2A25FBD400C9C770 /* FLNativeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FLNativeView.swift; path = FlutterGo/Views/FLNativeView.swift; sourceTree = SOURCE_ROOT; };
 		DAF35D332A25C86700C76C26 /* FlutterGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlutterGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAF35D362A25C86700C76C26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -120,12 +122,20 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		DA3321A42A25F54D00638AD2 /* views */ = {
+		DA3321A42A25F54D00638AD2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				DA5A95DC2A25FBD400C9C770 /* FLNativeView.swift */,
 			);
-			path = views;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DA449D8D2A36B93700BB18BE /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				DA449D8E2A36B96B00BB18BE /* FlutterChannelManage.swift */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		DAF35D2A2A25C86700C76C26 = {
@@ -153,7 +163,8 @@
 		DAF35D352A25C86700C76C26 /* FlutterGo */ = {
 			isa = PBXGroup;
 			children = (
-				DA3321A42A25F54D00638AD2 /* views */,
+				DA449D8D2A36B93700BB18BE /* Tools */,
+				DA3321A42A25F54D00638AD2 /* Views */,
 				DA3321A12A25EA8600638AD2 /* Base */,
 				DA33219F2A25EA6F00638AD2 /* ViewControllers */,
 				DAF35D362A25C86700C76C26 /* AppDelegate.swift */,
@@ -374,6 +385,7 @@
 				DA5A95DD2A25FBD400C9C770 /* FLNativeView.swift in Sources */,
 				DA3321A32A25EADE00638AD2 /* TowViewController.swift in Sources */,
 				DAF35D372A25C86700C76C26 /* AppDelegate.swift in Sources */,
+				DA449D8F2A36B96B00BB18BE /* FlutterChannelManage.swift in Sources */,
 				DA33219E2A25E6B200638AD2 /* FlutterBaseViewController.swift in Sources */,
 				DAF35D392A25C86700C76C26 /* SceneDelegate.swift in Sources */,
 			);

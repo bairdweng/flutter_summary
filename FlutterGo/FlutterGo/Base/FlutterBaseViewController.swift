@@ -21,13 +21,15 @@ class FlutterBaseViewController: FlutterViewController {
         // 通道
         channel = FlutterMethodChannel(
             name: "multiple-flutters", binaryMessenger: engine!.binaryMessenger)
-        channel!.setMethodCallHandler { (call: FlutterMethodCall, result: @escaping FlutterResult) in
+
+        channel!.setMethodCallHandler { [unowned self] (call: FlutterMethodCall, result: @escaping FlutterResult) in
             if self.delegate != nil {
                 self.delegate?.callMethods(vc: self, funtionName: call.method, params: result)
             }
         }
-        
-       
+        if channel != nil {
+            FlutterChannelManage.single.channelList.append(channel!)
+        }
         // Do any additional setup after loading the view.
     }
 
@@ -37,20 +39,29 @@ class FlutterBaseViewController: FlutterViewController {
         let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
         let newEngine = appDelegate.engines.makeEngine(withEntrypoint: entryPoint, libraryURI: nil)
         GeneratedPluginRegistrant.register(with: newEngine)
-        
+
         weak var registrar = newEngine.registrar(forPlugin: "hello_world")
-        
+
         let factory = FLNativeViewFactory(messenger: registrar!.messenger())
 
         registrar!.register(
             factory,
             withId: "platform_text_view")
-        
+
         super.init(engine: newEngine, nibName: nil, bundle: nil)
     }
 
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    deinit {
+        if channel != nil {
+            let index = FlutterChannelManage.single.channelList.firstIndex(of: channel!)
+            if index != NSNotFound {
+                FlutterChannelManage.single.channelList.remove(at: index!)
+            }
+        }
     }
 
     /*
