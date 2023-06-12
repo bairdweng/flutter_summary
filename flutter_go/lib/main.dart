@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import '父子组件/parent_child_component.dart';
+
 void main() => runApp(const MyApp());
+GlobalKey<ParentChildComponentStatus> childKey = GlobalKey(); //1. 创建 globalKey
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -58,6 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
       _counter++;
     });
     _channel.invokeListMethod("nextVc");
+    childKey.currentState?.callHello();
   }
 
   @override
@@ -96,7 +100,12 @@ class _MyHomePageState extends State<MyHomePage> {
               width: 100,
               height: 300,
               child: const MYNativeView(),
-            )
+            ),
+            ParentChildComponent(
+                key: childKey,
+                testCallBack: (val) {
+                  debugPrint("hello，你是谁啊$val");
+                })
           ],
         ),
       ),
