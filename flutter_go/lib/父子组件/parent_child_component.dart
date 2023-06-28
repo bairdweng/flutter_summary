@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class ParentChildComponent extends StatefulWidget {
-  final void Function(String val)? testCallBack;
+  final void Function(String val) testCallBack;
 
-  const ParentChildComponent({Key? key, this.testCallBack}) : super(key: key);
+  const ParentChildComponent({Key key, this.testCallBack}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() => ParentChildComponentStatus();
@@ -26,7 +26,7 @@ class ParentChildComponentStatus extends State<ParentChildComponent> {
         child: const Text("组件1"),
         onPressed: () {
           if (widget.testCallBack != null) {
-            widget.testCallBack!("你好我是组件1");
+            widget.testCallBack("你好我是组件1");
           }
         },
       ),

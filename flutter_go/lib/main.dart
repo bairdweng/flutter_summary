@@ -2,12 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '父子组件/parent_child_component.dart';
+import 'HomePage_page/page.dart';
+// ignore: import_of_legacy_library_into_null_safe
+import 'package:fish_redux/fish_redux.dart';
 
+// https://segmentfault.com/a/1190000038149626
 void main() => runApp(const MyApp());
 GlobalKey<ParentChildComponentStatus> childKey = GlobalKey(); //1. 创建 globalKey
+final AbstractRoutes routes = PageRoutes(
+  pages: {
+    "CountPage": HomePagePage(),
+  },
+);
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({Key key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
@@ -25,13 +34,14 @@ class MyApp extends StatelessWidget {
         // counter didn't reset back to zero; the application is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      // home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: routes.buildPage("CountPage", null),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({Key key, this.title}) : super(key: key);
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -50,7 +60,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
-  late MethodChannel _channel;
+  MethodChannel _channel;
   void _incrementCounter() {
     setState(() {
       // This call to setState tells the Flutter framework that something has
@@ -89,7 +99,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              '这非常好~~，直接开始了啊66',
+              '这非常好~~，直接开始了啊66677',
             ),
             Text(
               '$_counter',
@@ -105,7 +115,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 key: childKey,
                 testCallBack: (val) {
                   debugPrint("hello，你是谁啊$val");
-                })
+                }),
           ],
         ),
       ),
@@ -119,7 +129,7 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 class MYNativeView extends StatelessWidget {
-  const MYNativeView({Key? key}) : super(key: key);
+  const MYNativeView({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

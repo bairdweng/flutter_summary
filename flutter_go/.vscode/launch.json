@@ -7,7 +7,7 @@
         {
             "name": "Flutter: Attach to Device",
             "type": "dart",
-            "request": "attach"
+            "request": "attach",
         }
     ]
 }
