@@ -7,19 +7,34 @@ import 'state.dart';
 
 Widget buildView(
     HomePageState state, Dispatch dispatch, ViewService viewService) {
-  return Row(children: [
-    Container(
-      width: 100,
-      height: 50,
-      child: FloatingActionButton(
-        onPressed: () {
-          debugPrint("hello nima");
-          dispatch(HomePageActionCreator.countIncrease());
-        },
-        child: const Icon(Icons.add),
+  return Scaffold(
+      appBar: AppBar(
+        title: const Text("首页"),
       ),
-    ),
-    Text("0" + state.count.toString())
-    // ignore: prefer_interpolation_to_compose_strings
-  ]);
+      body: Center(
+          child: Row(children: [
+        Container(
+          color: Colors.yellow,
+          child: FloatingActionButton(
+            onPressed: () {
+              debugPrint("hello nimas  ddd");
+              dispatch(HomePageActionCreator.countIncrease());
+            },
+            child: const Icon(Icons.add),
+          ),
+        ),
+        FloatingActionButton(
+          heroTag: "336",
+          onPressed: () {
+            debugPrint("打开下一个页面");
+            dispatch(HomePageActionCreator.openNextPage());
+          },
+          child: const Icon(Icons.open_in_browser),
+        ),
+        Text("${state.count}"),
+        Container(
+          padding: const EdgeInsets.only(left: 5),
+          child: Text("${state.page}"),
+        )
+      ])));
 }

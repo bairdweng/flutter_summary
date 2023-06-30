@@ -1,7 +1,8 @@
 import 'package:fish_redux/fish_redux.dart';
 
-enum HomePageAction { action, increase, updateCount }
+enum HomePageAction { action, increase, updateCount, openNextPage }
 
+// 相当于所有的方法都写在这里
 class HomePageActionCreator {
   static Action onAction() {
     return const Action(HomePageAction.action);
@@ -14,5 +15,9 @@ class HomePageActionCreator {
 
   static Action updateCount(int count) {
     return Action(HomePageAction.updateCount, payload: count);
+  }
+
+  static Action openNextPage() {
+    return const Action(HomePageAction.openNextPage);
   }
 }
