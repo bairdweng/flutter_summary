@@ -8,5 +8,4 @@ Effect<NextPageState> buildEffect() {
   });
 }
 
-void _onAction(Action action, Context<NextPageState> ctx) {
-}
+void _onAction(Action action, Context<NextPageState> ctx) {}

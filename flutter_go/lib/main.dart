@@ -5,12 +5,17 @@ import '父子组件/parent_child_component.dart';
 import 'HomePage_page/page.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:fish_redux/fish_redux.dart';
+import 'package:flutter_go/list_page/page.dart';
 
 // https://segmentfault.com/a/1190000038149626
 void main() => runApp(const MyApp());
 GlobalKey<ParentChildComponentStatus> childKey = GlobalKey(); //1. 创建 globalKey
 final AbstractRoutes routes = PageRoutes(
-  pages: {"CountPage": HomePagePage(), "NextPage": NextPagePage()},
+  pages: {
+    "CountPage": HomePagePage(),
+    "NextPage": NextPagePage(),
+    "ListPage": ListPage()
+  },
 );
 
 class MyApp extends StatelessWidget {

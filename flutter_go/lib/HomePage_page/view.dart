@@ -38,3 +38,6 @@ Widget buildView(
         )
       ])));
 }
+
+Widget _buildTestView(
+    HomePageState state, Dispatch dispatch, ViewService viewService) {}

@@ -21,6 +21,6 @@ void _onIncrease(Action action, Context<HomePageState> ctx) {
 }
 
 void _openNextPage(Action action, Context<HomePageState> ctx) async {
-  var result = await Navigator.of(ctx.context).pushNamed("NextPage");
+  var result = await Navigator.of(ctx.context).pushNamed("ListPage");
   debugPrint('a=======================$result');
 }
