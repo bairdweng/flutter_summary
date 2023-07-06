@@ -11,12 +11,12 @@ Widget _bodyWidget(ItemState state) {
   return Card(
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
     elevation: 5,
-    margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+    margin: const EdgeInsets.only(left: 20, right: 20, top: 20),
     child: Row(
       children: <Widget>[
         //左边图片
         Container(
-          margin: EdgeInsets.all(10),
+          margin: const EdgeInsets.all(10),
           width: 180,
           height: 100,
           child: Image.network(

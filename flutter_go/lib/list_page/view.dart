@@ -6,8 +6,8 @@ import 'state.dart';
 Widget buildView(ListState state, Dispatch dispatch, ViewService viewService) {
   return Scaffold(
     appBar: AppBar(
-      title: Text("ListPage"),
-      backgroundColor: Colors.black12,
+      title: const Text("ListPage"),
+      backgroundColor: Colors.green,
     ),
     body: _itemWidget(state, viewService),
   );

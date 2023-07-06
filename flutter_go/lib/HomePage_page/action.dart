@@ -1,6 +1,13 @@
 import 'package:fish_redux/fish_redux.dart';
 
-enum HomePageAction { action, increase, updateCount, openNextPage }
+enum HomePageAction {
+  action,
+  increase,
+  updateCount,
+  openNextPage,
+  openSecondPage,
+  showStackView,
+}
 
 // 相当于所有的方法都写在这里
 class HomePageActionCreator {
@@ -19,5 +26,13 @@ class HomePageActionCreator {
 
   static Action openNextPage() {
     return const Action(HomePageAction.openNextPage);
+  }
+
+  static Action openSecondPage() {
+    return const Action(HomePageAction.openSecondPage);
+  }
+
+  static Action showStackView(bool isShow) {
+    return Action(HomePageAction.showStackView, payload: isShow);
   }
 }

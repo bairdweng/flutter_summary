@@ -5,11 +5,12 @@ import 'state.dart';
 import 'package:flutter/cupertino.dart' hide Action;
 import 'package:flutter/material.dart' hide Action;
 
-// 这里写方法的实现吗
+// 这里应该是处理各种方法的调用
 Effect<HomePageState> buildEffect() {
   return combineEffects(<Object, Effect<HomePageState>>{
     HomePageAction.increase: _onIncrease,
-    HomePageAction.openNextPage: _openNextPage
+    HomePageAction.openNextPage: _openNextPage,
+    HomePageAction.openSecondPage: _openSecondPage,
   });
 }
 
@@ -21,6 +22,9 @@ void _onIncrease(Action action, Context<HomePageState> ctx) {
 }
 
 void _openNextPage(Action action, Context<HomePageState> ctx) async {
-  var result = await Navigator.of(ctx.context).pushNamed("ListPage");
-  debugPrint('a=======================$result');
+  await Navigator.of(ctx.context).pushNamed("ListPage");
+}
+
+void _openSecondPage(Action action, Context<HomePageState> ctx) async {
+  await Navigator.of(ctx.context).pushNamed("NextPage");
 }
