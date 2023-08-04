@@ -14,7 +14,7 @@ import 'package:fl_example/bloc/bloc_example.dart';
 import 'package:fl_example/rxdart_example/rxdart_example.dart';
 import 'package:fl_example/rxdart_example/github_api.dart';
 import 'package:fl_example/app/flutter_app.dart';
-
+import 'package:fl_example/pages/record/record_page.dart';
 class MYRouter {
   final Map<String, Map<String, dynamic>> routers = {};
   // static _instance，_instance会在编译期被初始化，保证了只被创建一次
@@ -23,7 +23,9 @@ class MYRouter {
   MYRouter._internal() {
     init();
   }
+  
   void init() {
+    registerRouter("RecordPage", '录音', const RecordPage(title: "录音"));
     registerRouter("widgets_example", '基本的布局', const WidgetsExample(title: "基本的布局"));
     registerRouter("stack_layout", '叠层布局', const StackLayoutExample(title: "叠层布局"));
     registerRouter("after_layout", '响应式布局', const AfterLayoutExample(title: "响应式布局"));

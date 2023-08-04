@@ -37,6 +37,9 @@ dependencies:
   flutter_bloc: ^8.0.1
   rxdart: ^0.27.5
   http: ^0.13.4
+  flutter_sound: ^9.2.13
+  permission_handler: ^10.4.3
+  audio_session: ^0.1.16
 
 dev_dependencies:
   flutter_test:
