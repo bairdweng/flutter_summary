@@ -92,7 +92,8 @@ class WidgetsExampleState extends State<WidgetsExample> {
         child: UnconstrainedBox(
           //“去除”父级限制
           child: ConstrainedBox(
-            constraints: const BoxConstraints(minWidth: 90.0, minHeight: 20.0), //子
+            constraints:
+                const BoxConstraints(minWidth: 90.0, minHeight: 20.0), //子
             child: redBox(),
           ),
         ));

@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+
+enum ApplyJoinOpt{
+  AJO_ZERO = 0;//占位
+  AJO_NEED_APPROVE = 1;//需要审核（暂不支持）
+  AJO_FREE_ACCESS = 2;//自由加群（支持）
+  AJO_DISABLE_APPLY = 3;//拒绝加群（暂不支持）
+  AJO_NEED_AGREE = 4;//需要被邀请人同意（暂不支持）
+}
+
+
+message ConvGroupAtInfo{
+  //@你的类型
+  ApplyJoinOpt at_type=1;
+  //@你的消息id
+  int64 seq_id=2;
+}

@@ -1,4 +1,5 @@
 import 'package:fl_example/models/home_item.dart';
+import 'package:fl_example/pages/Keyboard/keyboard.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:fl_example/layout/widgets_example.dart';
 import 'package:fl_example/layout/stack_layout.dart';
@@ -14,6 +15,7 @@ import 'package:fl_example/bloc/bloc_example.dart';
 import 'package:fl_example/rxdart_example/rxdart_example.dart';
 import 'package:fl_example/rxdart_example/github_api.dart';
 import 'package:fl_example/app/flutter_app.dart';
+import 'package:fl_example/pages/yuanli/Yuanli.dart';
 
 class MYRouter {
   final Map<String, Map<String, dynamic>> routers = {};
@@ -24,18 +26,31 @@ class MYRouter {
     init();
   }
   void init() {
-    registerRouter("widgets_example", '基本的布局', const WidgetsExample(title: "基本的布局"));
-    registerRouter("stack_layout", '叠层布局', const StackLayoutExample(title: "叠层布局"));
-    registerRouter("after_layout", '响应式布局', const AfterLayoutExample(title: "响应式布局"));
-    registerRouter("base_container", '基本的容器', const BaseContainerExample(title: "基本的容器"));
-    registerRouter("scroll_container", '滚动的容器', const ScrollContainerExample(title: "滚动的容器"));
-    registerRouter("animation_list", '动画列表', const AnimationListExample(title: "动画列表"));
-    registerRouter("grid_view", 'grid_view', const GridViewExample(title: "grid_view"));
-    registerRouter("small_game_home", '小游戏', const SmallGameExample(title: "小游戏"));
-    registerRouter("base_container", '数据共享', const InheriedExample(title: "数据共享"));
-    registerRouter("provider_example", '跨组件共享', const ProviderExample(title: "跨组件共享"));
+    registerRouter("键盘", "键盘", const KeyboardExample(title: "键盘"));
+    registerRouter("原理", "原理", const YuanliExample(title: "原理"));
+    registerRouter(
+        "widgets_example", '基本的布局', const WidgetsExample(title: "基本的布局"));
+    registerRouter(
+        "stack_layout", '叠层布局', const StackLayoutExample(title: "叠层布局"));
+    registerRouter(
+        "after_layout", '响应式布局', const AfterLayoutExample(title: "响应式布局"));
+    registerRouter(
+        "base_container", '基本的容器', const BaseContainerExample(title: "基本的容器"));
+    registerRouter("scroll_container", '滚动的容器',
+        const ScrollContainerExample(title: "滚动的容器"));
+    registerRouter(
+        "animation_list", '动画列表', const AnimationListExample(title: "动画列表"));
+    registerRouter(
+        "grid_view", 'grid_view', const GridViewExample(title: "grid_view"));
+    registerRouter(
+        "small_game_home", '小游戏', const SmallGameExample(title: "小游戏"));
+    registerRouter(
+        "base_container", '数据共享', const InheriedExample(title: "数据共享"));
+    registerRouter(
+        "provider_example", '跨组件共享', const ProviderExample(title: "跨组件共享"));
     registerRouter("bloc_example", '跨组件共享', const BlocExample(title: "bloc"));
-    registerRouter("rxdart_example", 'rxdart_example', RXDartExample(api: GithubApi()));
+    registerRouter(
+        "rxdart_example", 'rxdart_example', RXDartExample(api: GithubApi()));
     registerRouter("App", "来一个app", const FlutterApp(title: "来一个app吧"));
   }
 
