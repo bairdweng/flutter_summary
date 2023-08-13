@@ -17,6 +17,8 @@ import 'package:fl_example/rxdart_example/github_api.dart';
 import 'package:fl_example/app/flutter_app.dart';
 import 'package:fl_example/pages/yuanli/Yuanli.dart';
 
+import 'package:fl_example/pages/record/record_page.dart';
+
 class MYRouter {
   final Map<String, Map<String, dynamic>> routers = {};
   // static _instance，_instance会在编译期被初始化，保证了只被创建一次
@@ -25,9 +27,11 @@ class MYRouter {
   MYRouter._internal() {
     init();
   }
+
   void init() {
     registerRouter("键盘", "键盘", const KeyboardExample(title: "键盘"));
     registerRouter("原理", "原理", const YuanliExample(title: "原理"));
+    registerRouter("RecordPage", '录音', const RecordPage(title: "录音"));
     registerRouter(
         "widgets_example", '基本的布局', const WidgetsExample(title: "基本的布局"));
     registerRouter(
