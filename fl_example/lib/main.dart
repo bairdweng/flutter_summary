@@ -1,4 +1,3 @@
-//@dart=2.17
 import 'package:fl_example/models/home_item.dart';
 import 'package:fl_example/pb/test.pb.dart';
 import 'package:flutter/material.dart';
@@ -6,6 +5,7 @@ import './router/router.dart';
 import 'package:provider/provider.dart';
 import './provider/provicer_counter.dart';
 // import '../pb/test.pbenum.dart';
+// import 'fl_example/lib/pages/animation/demos/animation_demo.dart';
 
 void main() {
   runApp(
@@ -19,7 +19,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({Key key, this.title}) : super(key: key);
 
   final String title;
   @override
@@ -57,7 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget initBody() {
     try {
       var info = ConvGroupAtInfo();
-      info.atType = ApplyJoinOpt.valueOf(3)!;
+      info.atType = ApplyJoinOpt.valueOf(3);
       print("type=========${info.atType}");
     } catch (e) {
       print("type error=========${e}");
