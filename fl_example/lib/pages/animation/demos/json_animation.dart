@@ -1,4 +1,4 @@
-//@dart=2.0
+//=2.0
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fl_example/pages/animation/common.dart';

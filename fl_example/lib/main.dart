@@ -1,10 +1,11 @@
+//@dart=2.17
 import 'package:fl_example/models/home_item.dart';
 import 'package:fl_example/pb/test.pb.dart';
 import 'package:flutter/material.dart';
 import './router/router.dart';
 import 'package:provider/provider.dart';
 import './provider/provicer_counter.dart';
-import '../pb/test.pbenum.dart';
+// import '../pb/test.pbenum.dart';
 
 void main() {
   runApp(

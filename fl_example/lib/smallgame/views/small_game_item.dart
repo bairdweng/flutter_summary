@@ -1,3 +1,4 @@
+//@dart=2.17
 import 'package:fl_example/smallgame/models/small_game_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';

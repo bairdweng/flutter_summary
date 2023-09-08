@@ -1,3 +1,4 @@
+//@dart=2.17
 import 'package:bloc/bloc.dart';
 
 /// {@template counter_cubit}

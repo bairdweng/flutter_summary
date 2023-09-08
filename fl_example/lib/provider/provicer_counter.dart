@@ -1,3 +1,4 @@
+//@dart=2.17
 import 'package:flutter/foundation.dart';
 
 // 公共的组件咯。

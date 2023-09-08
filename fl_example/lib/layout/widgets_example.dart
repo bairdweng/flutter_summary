@@ -1,3 +1,5 @@
+//@dart=2.17
+
 import 'package:flutter/material.dart';
 
 class WidgetsExample extends StatefulWidget {

@@ -1,4 +1,4 @@
-//@dart=2.0
+//=2.0
 import 'package:flutter/material.dart';
 import 'package:fl_example/pages/animation/basics/01_animation_container.dart';
 import 'package:fl_example/pages/animation/basics/02_page_route_builder.dart';
@@ -27,10 +27,6 @@ import 'package:fl_example/pages/animation/misc/repeating_animation.dart';
 
 import 'demos/custom_painter_demo.dart';
 import 'demos/text_style_animation.dart';
-
-void main() {
-  runApp(MyApp());
-}
 
 class Demo {
   final String name;

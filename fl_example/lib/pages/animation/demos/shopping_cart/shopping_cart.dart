@@ -1,4 +1,4 @@
-//@dart=2.0
+//=2.0
 import 'package:flutter/material.dart';
 import 'package:fl_example/pages/animation/common.dart';
 import 'supports/animation_ball_manager.dart';

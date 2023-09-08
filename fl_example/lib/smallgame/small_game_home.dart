@@ -1,3 +1,4 @@
+//@dart=2.17
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import './views/small_game_bg.dart';

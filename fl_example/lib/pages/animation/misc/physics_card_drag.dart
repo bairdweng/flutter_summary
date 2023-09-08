@@ -1,4 +1,4 @@
-//@dart=2.0
+//=2.0
 import 'package:flutter/material.dart';
 import 'package:flutter/physics.dart';
 

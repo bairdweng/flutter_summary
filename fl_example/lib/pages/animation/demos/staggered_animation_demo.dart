@@ -1,4 +1,4 @@
-//@dart=2.0
+//=2.0
 import 'package:flutter/material.dart';
 
 class StaggeredAnimationDemo extends StatefulWidget {

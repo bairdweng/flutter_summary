@@ -1,4 +1,4 @@
-//@dart=2.0
+//=2.0
 import 'package:flutter/material.dart';
 import 'package:fl_example/pages/animation/demos/shopping_cart/supports/ball_animation_widget.dart';
 import 'package:fl_example/pages/animation/demos/shopping_cart/supports/popup_animation_widget.dart';

@@ -1,3 +1,4 @@
+//@dart=2.17
 import 'github_api.dart';
 
 // The State represents the data the View requires. The View consumes a Stream

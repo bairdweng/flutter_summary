@@ -1,3 +1,4 @@
+//@dart=2.17
 import 'package:flutter/cupertino.dart';
 
 class SmallGameShortPath {

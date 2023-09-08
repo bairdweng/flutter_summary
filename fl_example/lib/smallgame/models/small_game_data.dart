@@ -1,3 +1,4 @@
+//@dart=2.17
 class SmallGameData {
   final List<SmallGameModel> items = [];
 

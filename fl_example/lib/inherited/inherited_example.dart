@@ -1,3 +1,5 @@
+//@dart=2.17
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import './inherited_parent.dart';

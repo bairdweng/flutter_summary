@@ -1,3 +1,4 @@
+//@dart=2.17
 import 'dart:async';
 
 import 'package:rxdart/rxdart.dart';
