@@ -206,11 +206,15 @@ class RecordPageState extends State<RecordPage> {
   }
 
   Future<void> startPlayer() async {
+    filePath =
+        "https://flutter-sound.canardoux.xyz/web_example/assets/extract/06.mp4";
+
+    // "https://res.miyachat.com/staging/upload/sign_voice/1692288000/64DF2E44/64DF39FD162E44/1692350973433181453636_0.mp4"
     if (filePath.isEmpty) {
       return;
     }
     try {
-      print("voice开始播放");
+      print("voice开始播放 ${filePath}");
       await playerModule.startPlayer(
           fromURI: filePath,
           codec: _codec,

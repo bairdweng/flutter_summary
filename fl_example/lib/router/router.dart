@@ -1,3 +1,4 @@
+//@dart=2.0
 import 'package:fl_example/models/home_item.dart';
 import 'package:fl_example/pages/Keyboard/keyboard.dart';
 import 'package:flutter/cupertino.dart';
@@ -18,6 +19,8 @@ import 'package:fl_example/app/flutter_app.dart';
 import 'package:fl_example/pages/yuanli/Yuanli.dart';
 
 import 'package:fl_example/pages/record/record_page.dart';
+import 'package:fl_example/pages/animation/animation.dart';
+import 'package:fl_example/pages/animation/animation_demos.dart';
 
 class MYRouter {
   final Map<String, Map<String, dynamic>> routers = {};
@@ -29,6 +32,9 @@ class MYRouter {
   }
 
   void init() {
+    // animation_demos AnimationDemos
+    registerRouter("动画Demo", "动画Demo", AnimationDemos());
+    registerRouter("动画", "动画", const AnimationExample(title: "动画"));
     registerRouter("键盘", "键盘", const KeyboardExample(title: "键盘"));
     registerRouter("原理", "原理", const YuanliExample(title: "原理"));
     registerRouter("RecordPage", '录音', const RecordPage(title: "录音"));
@@ -74,8 +80,8 @@ class MYRouter {
   Map<String, WidgetBuilder> getRouters() {
     Map<String, WidgetBuilder> buildRouters = {};
     for (String key in routers.keys) {
-      Map<String, dynamic>? item = routers[key];
-      buildRouters[key] = item!['page'];
+      Map<String, dynamic> item = routers[key];
+      buildRouters[key] = item['page'];
     }
     return buildRouters;
   }
@@ -83,8 +89,8 @@ class MYRouter {
   List<HomeItem> getRouterItems() {
     List<HomeItem> items = [];
     for (String key in routers.keys) {
-      Map<String, dynamic>? item = routers[key];
-      String title = item!['title'];
+      Map<String, dynamic> item = routers[key];
+      String title = item['title'];
       HomeItem(key, title);
       items.add(HomeItem(title, key));
     }
