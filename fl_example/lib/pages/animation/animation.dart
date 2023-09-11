@@ -3,6 +3,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import 'my_demo/voice_animation/voice_volume_animation.dart';
+
 class AnimationExample extends StatefulWidget {
   const AnimationExample({Key? key, required this.title}) : super(key: key);
   final String title;
@@ -12,28 +14,19 @@ class AnimationExample extends StatefulWidget {
 
 class AnimationExampleState extends State<AnimationExample>
     with TickerProviderStateMixin {
-  GlobalKey<VoiceVolumeAnimationBarState> animationG = GlobalKey();
-  late AnimationController _controllerX;
-  late Animation<double> _turns;
-
+  GlobalKey<VoiceVolumeAnimationState> left = GlobalKey();
+  GlobalKey<VoiceVolumeAnimationState> right = GlobalKey();
+  int value = 0;
   @override
   void initState() {
-    _controllerX = AnimationController(
-      duration: const Duration(milliseconds: 1000),
-      vsync: this,
-    )..repeat();
-    _turns = Tween(begin: 0.0, end: pi * 2).animate(
-      CurvedAnimation(parent: _controllerX, curve: Curves.easeIn),
-    );
-    _controllerX.forward()..whenComplete(() => _controllerX.reverse());
-
     super.initState();
   }
 
   @override
   void dispose() {
     super.dispose();
-    _controllerX.dispose();
+    left.currentState?.stop();
+    right.currentState?.stop();
   }
 
   @override
@@ -44,29 +37,36 @@ class AnimationExampleState extends State<AnimationExample>
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            GestureDetector(
-              child: Text("点击"),
-              onTap: () {
-                animationG.currentState
-                    ?.setCurrentValume(Random().nextDouble());
-              },
-            ),
-            // ignore: avoid_unnecessary_containers
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  color: Colors.yellow,
-                  width: 100,
-                  height: 40,
-                  child: IMVoiceVolumeAnimationBar(key: animationG),
-                )
-              ],
-            ),
-            CustomPaint(
-              size: Size(100, 40),
-              painter: MyPainter(_controllerX),
-            ),
+            Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+              Container(
+                width: 100,
+                height: 40,
+                color: Colors.yellow,
+                child: VoiceVolumeAnimation(
+                    key: left, direction: VoiceVolumePainterDirection.left),
+              ),
+              GestureDetector(
+                child: const Text("点击"),
+                onTap: () {
+                  value = value + 1;
+                  if (value > 8) {
+                    value = 0;
+                  }
+
+                  print("动画被点击---------${value}");
+
+                  left.currentState?.reloadValue(value);
+                  right.currentState?.reloadValue(value);
+                },
+              ),
+              Container(
+                color: Colors.yellow,
+                width: 100,
+                height: 40,
+                child: VoiceVolumeAnimation(
+                    key: right, direction: VoiceVolumePainterDirection.right),
+              ),
+            ])
           ],
         ),
       ),
@@ -74,116 +74,50 @@ class AnimationExampleState extends State<AnimationExample>
   }
 }
 
-class IMVoiceVolumeAnimationBar extends StatefulWidget {
-  const IMVoiceVolumeAnimationBar({Key? key}) : super(key: key);
-
-  @override
-  State<StatefulWidget> createState() {
-    return VoiceVolumeAnimationBarState();
-  }
-}
-
-class VoiceVolumeAnimationBarState extends State<IMVoiceVolumeAnimationBar> {
-  double currentValumeValue = 0.0;
-  @override
-  Widget build(BuildContext context) {
-    // 个数
-    var itemCount = 8;
-    var height = 20.0;
-
-    double flag = currentValumeValue * itemCount;
-    List<Widget> list = [];
-    for (int i = 0; i < itemCount; i++) {
-      list.add(createItem(height, i < flag));
-      height = height + 3;
-    }
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: list,
-    );
-  }
-
-  void setCurrentValume(double value) {
-    setState(() {
-      currentValumeValue = value;
-    });
-  }
-
-  Widget createItem(double height, bool isLight) {
-    return SizedBox(
-      width: 5,
-      height: height,
-      child: DecoratedBox(
-        decoration: BoxDecoration(color: isLight ? Colors.blue : Colors.grey),
-      ),
-    );
-  }
-}
-
-class MyPainter extends CustomPainter {
-  final Animation<double> repaintX;
-  const MyPainter(this.repaintX);
-  // 波长
-  final double waveWidth = 80;
-  // 振幅
-  final double waveHeight = 40;
+class LoadingPainter extends CustomPainter {
+  final Animation<double> animation;
+  LoadingPainter({required this.animation}) : super(repaint: animation);
+  static const width = 30.0;
 
   @override
   void paint(Canvas canvas, Size size) {
-    // print("repaintX====${repaintX.value}");
-    // // 创建画笔
-    // final Paint paintLine = Paint()
-    //   ..color = Colors.black
-    //   ..strokeWidth = 3;
-    // // 绘制线
-    // canvas.drawLine(Offset(-100, 0), Offset(100, 0), paintLine);
-    // canvas.drawLine(Offset(0, 100), Offset(0, -100), paintLine);
-    // // 创建画笔
-    // final Paint paintPoint = Paint()..color = Colors.red;
-    // // 绘制圆点
-    // canvas.drawCircle(Offset(0, 0), 10, paintPoint);
-    Paint paint = Paint()
+    print("绘制绘制");
+    final angle = animation.value * pi * 2.0;
+    final paintBg = Paint()
+      ..color = Colors.grey
+      ..strokeWidth = width
+      ..style = PaintingStyle.stroke;
+
+    canvas.drawCircle(
+      Offset(
+        size.width * 0.5,
+        size.height * 0.5,
+      ),
+      size.width * 0.5,
+      paintBg,
+    );
+
+    final paint = Paint()
       ..color = Colors.red
-      ..style = PaintingStyle.fill // 这里改为填充模式，不再是线条
-      ..strokeWidth = 2;
-    // 画布移动屏幕中央
-    canvas.translate(200 / 2, 200 / 2);
-    // 画布保存状态
-    canvas.save();
-    // 根据进度修改画布x轴的位置，然后不断重绘进行动效的实现
-    canvas.translate(2 * waveWidth * repaintX.value, 0);
-    // 保存画布状态
-    Path path = Path();
-    // 第一组波浪
-    path.relativeQuadraticBezierTo(
-        waveWidth / 2, -waveHeight * 2, waveWidth, 0);
-    path.relativeQuadraticBezierTo(waveWidth / 2, waveHeight * 2, waveWidth, 0);
-    // 第二组波浪
-    path.relativeQuadraticBezierTo(
-        waveWidth / 2, -waveHeight * 2, waveWidth, 0);
-    path.relativeQuadraticBezierTo(waveWidth / 2, waveHeight * 2, waveWidth, 0);
-    // 当前结束点（x,y）与（x+0,y+60）进行连接
-    path.relativeLineTo(0, 60);
-    // 当前结束点（x,y）与（x-80*2*2,y）进行连接
-    path.relativeLineTo(-waveWidth * 2 * 2.0, 0);
-    // 路径关闭
-    path.close();
-    // 绘制
-    canvas.drawPath(path, paint);
-    // 恢复画布
-    canvas.restore();
-    // 矩形边框
-    Path pathRect = Path();
-    pathRect.addRect(Rect.fromLTWH(160, -140, 160, 200));
-    // 设置矩形边框画笔
-    Paint paintCircle = Paint()
-      ..color = Colors.black
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = 2;
-    // 绘制矩形
-    canvas.drawPath(pathRect, paintCircle);
+      ..strokeWidth = width
+      ..strokeCap = StrokeCap.round
+      ..style = PaintingStyle.stroke;
+
+    canvas.drawArc(
+      Rect.fromCenter(
+        center: Offset(size.width * 0.5, size.height * 0.5),
+        width: size.width,
+        height: size.height,
+      ),
+      -0.5 * pi,
+      angle,
+      false,
+      paint,
+    );
   }
 
   @override
-  bool shouldRepaint(MyPainter oldDelegate) => oldDelegate.repaintX != repaintX;
+  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+    return false;
+  }
 }
