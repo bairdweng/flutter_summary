@@ -4,6 +4,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 import 'my_demo/voice_animation/voice_volume_animation.dart';
+import 'my_demo/zoom/zoom_animation.dart';
 
 class AnimationExample extends StatefulWidget {
   const AnimationExample({Key? key, required this.title}) : super(key: key);
@@ -52,9 +53,7 @@ class AnimationExampleState extends State<AnimationExample>
                   if (value > 8) {
                     value = 0;
                   }
-
                   print("动画被点击---------${value}");
-
                   left.currentState?.reloadValue(value);
                   right.currentState?.reloadValue(value);
                 },
@@ -66,7 +65,8 @@ class AnimationExampleState extends State<AnimationExample>
                 child: VoiceVolumeAnimation(
                     key: right, direction: VoiceVolumePainterDirection.right),
               ),
-            ])
+            ]),
+            ZoomAnimation()
           ],
         ),
       ),
